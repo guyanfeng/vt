@@ -1,10 +1,7 @@
-var express = require('express');
-var path = require('path');
+import express from 'express';
+import path from 'path';
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,4 +34,8 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
-module.exports = app;
+app.listen(3000, function() {
+    console.log('Example app listening on port 3000!');
+    });
+
+export default app;
