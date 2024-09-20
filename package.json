@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node src/index.js",
-    "build": "cp src/views dist/views && tsc"
+    "build": "cp -r src/public dist/public && cp -r src/views dist/views && postcss src/styles/main.css -o dist/public/main.css && tsc"
   },
   "dependencies": {
     "ejs": "~2.6.1",
