@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "src/index.ts"
     }
-  ]
+  ],
+  "scripts": {
+    "build": "cp -r src/public dist/public && cp -r src/views dist/views && postcss src/styles/main.css -o dist/public/main.css && tsc"
+  }
 }
